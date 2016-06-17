@@ -70,6 +70,6 @@ and print p disp =
   | Sesym (_, s) -> print p disp s
   | Swrapped _ -> Ocs_port.puts p "#<wrapped>"
   | Sunspec -> Ocs_port.puts p "#<unspecified>"
+  | Srecord (id, stamp, _) -> Printf.ksprintf (Ocs_port.puts p) "#<%s/%d>" id stamp
   | _ -> Ocs_port.puts p "#<unknown>"
 ;;
-

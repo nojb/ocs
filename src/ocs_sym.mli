@@ -34,3 +34,5 @@ val sym_let_syntax : sval
 val sym_letrec_syntax : sval
 val sym_syntax_rules : sval
 val sym_ellipsis : sval
+
+val sym_make_record_type : sval

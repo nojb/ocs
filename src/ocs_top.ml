@@ -22,6 +22,7 @@ let make_env () =
     Ocs_string.init e;
     Ocs_contin.init e;
     Ocs_io.init e;
+    Ocs_record.init e;
     e
 ;;
 
@@ -72,4 +73,3 @@ let top_loop env th =
 let interactive () =
   top_loop (make_env ()) (make_thread ())
 ;;
-

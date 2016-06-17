@@ -5,7 +5,7 @@ open Ocs_vartable
 (* We have to declare most types here to avoid cross-dependencies between
    compilation units.  *)
 
-type sval = 
+type sval =
   (* Global variables are set to Sunbound when referenced but not assigned.  *)
     Sunbound
 
@@ -71,6 +71,9 @@ type sval =
 
   (* An unspecified value.  *)
   | Sunspec
+
+  (* A record value. *)
+  | Srecord of string * int * sval array
 
   (* The actual type of a pair (cons cell).  *)
 and spair =
@@ -197,4 +200,3 @@ and dynext =
     dynext_before : thread * code;
     dynext_after : thread * code
   }
-
